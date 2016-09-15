@@ -1,0 +1,20 @@
+<p><strong class="cap"><%=session[:identity]%></strong>, для вас подготовлен список:</p>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Имя клиента</th>
+			<th>Дата обращения</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @list.each do |client| %>
+			<tr>
+				<td><a href="/secure/client-<%= client.id %>"><%= client.name %></a></td>
+				<td><%= client.created_at %></td>
+			</tr>
+		<% end %>
+	</tbody>
+
+</table>

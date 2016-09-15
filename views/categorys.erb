@@ -1,0 +1,6 @@
+<h2>Список</h2>
+<% @options.each do |item| %>
+	<p>
+		<a href="/category/<%= item.id %>"><%= item.name %></a>
+	</p>
+<% end %>
